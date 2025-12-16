@@ -1,0 +1,299 @@
+/* ========================================
+   PRICING PAGE STYLES
+   ======================================== */
+
+.pricing-section {
+    background: var(--light-gray);
+}
+
+.pricing-category {
+    margin-bottom: var(--spacing-xl);
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-dark);
+    flex-shrink: 0;
+}
+
+.category-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.category-header p {
+    margin: 0;
+    color: var(--medium-gray);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--light-gray);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--accent-gold);
+    transform: scaleY(0);
+    transition: var(--transition-normal);
+}
+
+.pricing-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.pricing-item:hover::before {
+    transform: scaleY(1);
+}
+
+.pricing-item.featured {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.1) 0%, rgba(212, 183, 106, 0.1) 100%);
+    border: 2px solid var(--accent-gold);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--gradient-gold);
+    color: var(--primary-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-info {
+    flex: 1;
+}
+
+.pricing-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.pricing-info p {
+    margin: 0;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+.pricing-price {
+    text-align: right;
+    padding-left: var(--spacing-md);
+}
+
+.pricing-price .price {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+}
+
+.pricing-price .duration {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--medium-gray);
+    margin-top: 0.25rem;
+}
+
+/* VIP Packages */
+.vip-packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.vip-package {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.vip-package:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.vip-package.featured {
+    border-color: var(--accent-gold);
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.05) 0%, rgba(212, 183, 106, 0.05) 100%);
+}
+
+.vip-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-gold);
+    color: var(--primary-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-md);
+}
+
+.vip-package h3 {
+    font-size: 1.75rem;
+    margin: var(--spacing-md) 0;
+}
+
+.vip-desc {
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-md);
+}
+
+.vip-features {
+    text-align: left;
+    margin: var(--spacing-md) 0;
+}
+
+.vip-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-dark);
+}
+
+.vip-features i {
+    color: var(--accent-gold);
+    font-size: 1.125rem;
+}
+
+.vip-price {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-md) 0;
+    border-top: 2px solid var(--light-gray);
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.vip-price .price {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+}
+
+.vip-price .duration {
+    display: block;
+    color: var(--medium-gray);
+    margin-top: 0.5rem;
+}
+
+/* Pricing Info Section */
+.pricing-info-section {
+    background: var(--gradient-dark);
+}
+
+.pricing-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+}
+
+.info-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.info-box i {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.info-box h3 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.info-box p {
+    color: var(--light-gray);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pricing-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .pricing-price {
+        padding-left: 0;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .vip-packages {
+        grid-template-columns: 1fr;
+    }
+}

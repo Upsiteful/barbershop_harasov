@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Закажи термин - Фризерски салон Харашов</title>
+    <link rel="icon" href="logo-removebg-preview.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo-removebg-preview.png" alt="Паче лого">
+                <span class="logo-text">ХАРАШОВ</span>
+            </div>
+            
+           <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link ">Почетна</a></li>
+                <li><a href="onama.html" class="nav-link">О нама</a></li>
+                <li><a href="cenovnik.html" class="nav-link">Ценовник</a></li>
+                <li><a href="galerija.html" class="nav-link">Галерија</a></li>
+                <li><a href="kontakt.html" class="nav-link">Контакт</a></li>
+                <li><a href="booking.html" class="nav-link nav-cta active">Закажи термин</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1>Закажи термин</h1>
+            <p>Изаберите фризера и слободан термин</p>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-section section-padding">
+        <div class="container">
+            
+            <!-- STEP 1: Choose Barber -->
+            <div class="booking-step" id="step1">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <h2>Изаберите фризера</h2>
+                </div>
+                
+                <div class="barbers-grid">
+                    <div class="barber-card" data-barber="0">
+                        <div class="barber-image">
+                            <img src="berber1.jpg" alt="Жарко">
+                        </div>
+                        <div class="barber-info">
+                            <h3>Жарко</h3>
+                            <p class="barber-specialty">Барбер специјалиста</p>
+                            <div class="barber-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5</span>
+                            </div>
+                            <p class="barber-desc">Експерт за класичне и модерне мушке фризуре</p>
+                            <button class="btn btn-primary select-barber" onclick="selectBarber(0)">
+                                <span>Изабери</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="barber-card" data-barber="1">
+                        <div class="barber-image">
+                            <img src="berber2.jpg" alt="Паче">
+                        </div>
+                        <div class="barber-info">
+                            <h3>Паче</h3>
+                            <p class="barber-specialty">Главни стилиста</p>
+                            <div class="barber-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                            <p class="barber-desc">Специјалиста за fade и модерне технике</p>
+                            <button class="btn btn-primary select-barber" onclick="selectBarber(1)">
+                                <span>Изабери</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="barber-card" data-barber="2">
+                        <div class="barber-image">
+                            <img src="berber3.jpg" alt="Петар">
+                        </div>
+                        <div class="barber-info">
+                            <h3>Петра</h3>
+                            <p class="barber-specialty">Колориста</p>
+                            <div class="barber-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.9</span>
+                            </div>
+                            <p class="barber-desc">Мајстор фарбања и стилизовања</p>
+                            <button class="btn btn-primary select-barber" onclick="selectBarber(2)">
+                                <span>Изабери</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="barber-card" data-barber="3">
+                        <div class="barber-image">
+                            <img src="berber4.jpg" alt="Стефан">
+                        </div>
+                        <div class="barber-info">
+                            <h3>Стефан</h3>
+                            <p class="barber-specialty">Стилиста</p>
+                            <div class="barber-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.3</span>
+                            </div>
+                            <p class="barber-desc">Специјалиста за свечане фризуре</p>
+                            <button class="btn btn-primary select-barber" onclick="selectBarber(3)">
+                                <span>Изабери</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- STEP 2: Choose Date & Time -->
+            <div class="booking-step" id="step2" style="display: none;">
+                <div class="step-header">
+                    <span class="step-number">2</span>
+                    <h2>Изаберите дан и време</h2>
+                </div>
+                
+                <div class="booking-form-container">
+                    <div class="selected-barber-info">
+                        <img src="" alt="" id="selectedBarberImg">
+                        <div>
+                            <h3 id="selectedBarberName"></h3>
+                            <p id="selectedBarberRole"></p>
+                        </div>
+                        <button class="btn btn-outline btn-small promenifrizera" onclick="changeBarber()">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Промени</span>
+                        </button>
+                    </div>
+                    
+                    <div class="datetime-selector">
+                        <div class="form-group">
+                            <label for="daySelect">
+                                <i class="fas fa-calendar-day"></i>
+                                Изаберите дан
+                            </label>
+                            <select id="daySelect" class="form-control">
+                                <option value="Данас">Данас</option>
+                                <option value="Сутра">Сутра</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="showAvailableTimes()">
+                            <span>Прикажи слободне термине</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="available-times" id="availableTimes" style="display: none;">
+                        <h3>Слободни термини</h3>
+                        <div class="times-grid" id="timesGrid">
+                            <!-- Dynamically populated -->
+                        </div>
+                        
+                        <button class="btn btn-primary" id="confirmTimeBtn" onclick="confirmTime()" style="display: none;">
+                            <span>Потврди време</span>
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- STEP 3: Personal Info -->
+            <div class="booking-step" id="step3" style="display: none;">
+                <div class="step-header">
+                    <span class="step-number">3</span>
+                    <h2>Ваши подаци</h2>
+                </div>
+                
+                <div class="booking-form-container">
+                    <div class="booking-summary">
+                        <h3>Резиме резервације</h3>
+                        <div class="summary-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <span class="summary-label">Фризер</span>
+                                <span class="summary-value" id="summaryBarber"></span>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <span class="summary-label">Дан</span>
+                                <span class="summary-value" id="summaryDay"></span>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="summary-label">Време</span>
+                                <span class="summary-value" id="summaryTime"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personal-info-form">
+                        <div class="form-group">
+                            <label for="clientName">
+                                <i class="fas fa-user"></i>
+                                Ваше име и презиме *
+                            </label>
+                            <input 
+                                type="text" 
+                                id="clientName" 
+                                class="form-control" 
+                                placeholder="Унесите ваше име"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="clientPhone">
+                                <i class="fas fa-phone"></i>
+                                Контакт телефон *
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="clientPhone" 
+                                class="form-control" 
+                                placeholder="06x xxx xxxx"
+                                required
+                            >
+                        </div>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-info-circle"></i>
+                              Резервација ће бити одмах потврђена након клика на дугме.
+                           </p>
+
+                        <p class="error-message" id="errorMessage" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Молимо попуните сва обавезна поља!
+                        </p>
+                        
+                        <div class="form-actions">
+                            <button class="btn btn-outline" onclick="goBackToStep2()">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Назад</span>
+                            </button>
+                            <button class="btn btn-primary btn-large" onclick="confirmBooking()">
+                                <span>Потврди резервацију</span>
+                                <i class="fas fa-check-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Резервација успешна!</h2>
+            <p>Ваш термин је успешно заказан.</p>
+            
+            <div class="booking-details">
+                <div class="detail-item">
+                    <span class="detail-label">Фризер:</span>
+                    <span class="detail-value" id="modalBarber"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Дан:</span>
+                    <span class="detail-value" id="modalDay"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Време:</span>
+                    <span class="detail-value" id="modalTime"></span>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i>
+                    <span>Почетна</span>
+                </a>
+                <button class="btn btn-primary" onclick="newBooking()">
+                    <span>Нова резервација</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo-removebg-preview.png" alt="Паче лого">
+                        <span>ХАРАШОВ</span>
+                    </div>
+                    <p>Луксузан фризерски салон где стил среће савршенство.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Брзи линкови</h3>
+                    <ul>
+                        <li><a href="index.html">Почетна</a></li>
+                        <li><a href="onama.html">О нама</a></li>
+                        <li><a href="cenovnik.html">Ценовник</a></li>
+                        <li><a href="galerija.html">Галерија</a></li>
+                        <li><a href="kontakt.html">Контакт</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Услуге</h3>
+                    <ul>
+                        <li><a href="pricing.html#mens">Мушко шишање</a></li>
+                        <li><a href="pricing.html#womens">Женске фризуре</a></li>
+                        <li><a href="pricing.html#color">Фарбање</a></li>
+                        <li><a href="pricing.html#beard">Брада & Брк</a></li>
+                        <li><a href="pricing.html#kids">Дечије шишање</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Контакт</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Београд, Србија</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+381 64 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@harasov.rs</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Пон - Нед: 09:00 - 20:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Фризерски салон Харашов. Сва права задржана.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Firebase & Booking Script -->
+    <script type="module" src="booking.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (!hamburger || !navMenu) return;
+
+  // Toggle menu
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  // Zatvaranje menija klikom na link
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    });
+  });
+
+  // Zatvaranje klikom van menija
+  document.addEventListener("click", (e) => {
+    if (
+      !navMenu.contains(e.target) &&
+      !hamburger.contains(e.target)
+    ) {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  });
+});
+
+    </script>
+</body>
+</html>

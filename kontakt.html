@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакт | Фризерски салон Харашов</title>
+  <meta name="description" content="Контактирајте Фризерски салон Харашов. Адреса, телефон, радно време и контакт форма." />
+  <link rel="icon" href="assets/logo.png" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="kontakt.css">
+</head>
+
+<body>
+  <!-- NAVIGATION (isti kao na main) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo-removebg-preview.png" alt="Паче лого">
+        <span class="logo-text">ХАРАШОВ</span>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Почетна</a></li>
+        <li><a href="onama.html" class="nav-link">О нама</a></li>
+        <li><a href="cenovnik.html" class="nav-link">Ценовник</a></li>
+        <li><a href="galerija.html" class="nav-link">Галерија</a></li>
+        <li><a href="kontakt.html" class="nav-link active">Контакт</a></li>
+        <li><a href="booking.html" class="nav-link nav-cta">Закажи термин</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger" aria-label="Отвори мени" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header contact-header">
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <h1>Контакт</h1>
+      <p>Пишите нам или нас позовите — одговор добијате брзо.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT OVERVIEW -->
+  <section class="contact section-padding">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">Информације</span>
+        <h2 class="section-title">Ту смо за вас</h2>
+        <p class="section-subtitle">Све што вам треба на једном месту: телефон, адреса, радно време и директан контакт.</p>
+      </div>
+
+      <div class="contact-cards">
+        <a class="contact-card" href="tel:+381641234567" aria-label="Позови салон">
+          <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-card-content">
+            <h3>Телефон</h3>
+            <p>+381 64 123 4567</p>
+            <span class="contact-card-action">Позови одмах</span>
+          </div>
+        </a>
+
+        <a class="contact-card" href="mailto:info@pache.rs" aria-label="Пошаљи имејл">
+          <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-card-content">
+            <h3>Е-пошта</h3>
+            <p>info@pache.rs</p>
+            <span class="contact-card-action">Пошаљи поруку</span>
+          </div>
+        </a>
+
+        <div class="contact-card" role="group" aria-label="Радно време">
+          <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+          <div class="contact-card-content">
+            <h3>Радно време</h3>
+            <p>Пон – Нед: 09:00 – 20:00</p>
+            <span class="contact-card-action">Без паузе</span>
+          </div>
+        </div>
+
+        <a class="contact-card" href="#map" aria-label="Погледај мапу">
+          <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-card-content">
+            <h3>Локација</h3>
+            <p>Београд, Србија</p>
+            <span class="contact-card-action">Отвори мапу</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM + MAP -->
+  <section class="contact-main section-padding dark-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <span class="section-label">Контакт форма</span>
+          <h2 class="section-title">Пошаљите упит</h2>
+          <p class="section-subtitle contact-subtitle">
+            Попуните форму и јавићемо вам се у најкраћем року. За хитне термине препоручујемо телефон.
+          </p>
+
+          <!-- Napomena: action treba povezati na backend / сервис (Formspree, Netlify Forms, itd.) -->
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Име и презиме</label>
+                <input id="name" name="name" type="text" placeholder="Нпр. Марко Петровић" required />
+              </div>
+              <div class="form-field">
+                <label for="phone">Телефон (опционо)</label>
+                <input id="phone" name="phone" type="tel" placeholder="+381 6x xxx xxxx" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Е-пошта</label>
+                <input id="email" name="email" type="email" placeholder="npr. marko@email.com" required />
+              </div>
+              <div class="form-field">
+                <label for="subject">Тема</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Изаберите тему</option>
+                  <option value="termin">Заказивање термина</option>
+                  <option value="cenovnik">Питање о ценовнику</option>
+                  <option value="savet">Савет / препорука</option>
+                  <option value="saradnja">Сарадња</option>
+                  <option value="ostalo">Остало</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Порука</label>
+              <textarea id="message" name="message" rows="6" placeholder="Укратко опишите шта вам је потребно…" required></textarea>
+            </div>
+
+            <div class="form-consent">
+              <label class="checkbox">
+                <input type="checkbox" required />
+                <span>Сагласан/на сам са условима и политиком приватности.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large contact-submit">
+              <span>Пошаљи поруку</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <p class="form-note">
+              Или директно: <a href="tel:+381641234567">+381 64 123 4567</a> • <a href="mailto:info@pache.rs">info@pache.rs</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- MAP + QUICK CTA -->
+        <div class="contact-map-wrap" id="map">
+          <div class="map-card">
+            <div class="map-card-head">
+              <h3>Пронађите нас</h3>
+              <p>Београд, Србија</p>
+            </div>
+
+            <!-- Zameni src sa stvarnom lokacijom (Google Maps embed) -->
+            <div class="map-embed" aria-label="Мапа локације салона">
+              <iframe
+                title="Мапа - Фризерски салон Харашов"
+                src="https://www.google.com/maps?q=Belgrade&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <div class="map-actions">
+              <a class="btn btn-outline" href="https://www.google.com/maps?q=Belgrade" target="_blank" rel="noopener">
+                <span>Отвори у мапама</span>
+                <i class="fas fa-location-arrow"></i>
+              </a>
+              <a class="btn btn-secondary" href="booking.html">
+                <span>Закажи термин</span>
+                <i class="fas fa-calendar-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-faq">
+            <h3>Честа питања</h3>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">
+                <span>Да ли је обавезно заказивање?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">
+                <p>Препоручујемо заказивање због сигурног термина. Уколико имамо слободно место, примамо и без најаве.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">
+                <span>Који начин плаћања је доступан?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">
+                <p>Готовина и картице (уколико имате POS). Ако желите, могу додати и иконе/ознаке начина плаћања.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">
+                <span>Колико раније треба заказати?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">
+                <p>За викенд термине препорука је 2–3 дана раније. Радним данима често има простора и истог дана.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section-padding dark-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Желите најбржи одговор?</h2>
+        <p>Позовите нас и резервишите термин за мање од минут.</p>
+        <a href="tel:+381641234567" class="btn btn-primary btn-large">
+          <span>Позови салон</span>
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (isti kao na main) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="logo-removebg-preview.png" alt="Паче лого">
+            <span>ХАРАШОВ</span>
+          </div>
+          <p>Луксузан фризерски салон где стил среће савршенство.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Брзи линкови</h3>
+          <ul>
+            <li><a href="index.html">Почетна</a></li>
+            <li><a href="onama.html">О нама</a></li>
+            <li><a href="cenovnik.html">Ценовник</a></li>
+            <li><a href="galerija.html">Галерија</a></li>
+            <li><a href="kontakt.html">Контакт</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Услуге</h3>
+          <ul>
+            <li><a href="pricing.html#mens">Мушко шишање</a></li>
+            <li><a href="pricing.html#womens">Женске фризуре</a></li>
+            <li><a href="pricing.html#color">Фарбање</a></li>
+            <li><a href="pricing.html#beard">Брада & Брк</a></li>
+            <li><a href="pricing.html#kids">Дечије шишање</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Контакт</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i><span>Београд, Србија</span></li>
+            <li><i class="fas fa-phone"></i><span>+381 64 123 4567</span></li>
+            <li><i class="fas fa-envelope"></i><span>info@pache.rs</span></li>
+            <li><i class="fas fa-clock"></i><span>Пон - Нед: 09:00 - 20:00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Фризерски салон Харашов. Сва права задржана.</p>
+        <div class="footer-links">
+          <a href="#">Политика приватности</a>
+          <a href="#">Услови коришћења</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Врати на врх">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+
+  <!-- FAQ minimal JS (ne dira tvoj postojeći main.js) -->
+   <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (!hamburger || !navMenu) return;
+
+  // Toggle menu
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  // Zatvaranje menija klikom na link
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    });
+  });
+
+  // Zatvaranje klikom van menija
+  document.addEventListener("click", (e) => {
+    if (
+      !navMenu.contains(e.target) &&
+      !hamburger.contains(e.target)
+    ) {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  });
+});
+
+    </script>
+</body>
+</html>
